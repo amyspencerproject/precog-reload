@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Connection Mock-Up</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="img/precog-logo.png" />
+      </div>
+      <div class="ButtonGroup">
+        <a class="Button button" href="load-history-full.html"
+          ><i class="Icon fas fa-table"></i>Load History</a
+        >
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button
+        ><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
+    <div class="Page"></div>
+    <div class="DialogContainer">
+      <div class="Dialog">
+        <h1 class="Dialog-title">Reload only</h1>
+        <div class="Dialog-content">
+          <p>
+            Choosing "Reload only" will use previously staged data if it's
+            available. Note that reloading without schema regeneration might
+            lead to missing columns or tables.
+          </p>
+          <p>
+            This option loads the most recent initial load data, either from
+            when the dataset was first added to the pipeline, or from when the
+            last "Restage and reload" was completed. This load does not include
+            any delta loads that have occurred since the last initial load. This
+            action is an attempt to re-write it to the database again, using the
+            schema we previously inferred. If there is no previous data to
+            reuse, then Precog will stage and scheme the data anyway.
+          </p>
+          <p style="color: rgba(90, 67, 201, 1)">
+            Why - useful when configuring the pipeline for the first time. A
+            customer has changed something about the destination configuration.
+            They want to reload the data into the destination but do not want to
+            wait to pull the data from the API again.
+          </p>
+        </div>
+        <div class="ButtonGroup Dialog-buttons">
+          <a
+            class="Button Dialog-button"
+            type="button"
+            href="dialoge-datasets-reload.html"
+          >
+            <i class="Icon fas fa-times"></i>Cancel</a
+          ><a
+            class="Button Dialog-button"
+            type="button"
+            href="reload-only.html"
+          >
+            <i class="Icon fas fa-redo-alt"></i>Reload only</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

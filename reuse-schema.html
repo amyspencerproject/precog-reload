@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Connection Mock-Up</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="img/precog-logo.png" />
+      </div>
+      <div class="ButtonGroup">
+        <a class="Button button" href="load-history-full.html"
+          ><i class="Icon fas fa-table"></i>Load History</a
+        >
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button
+        ><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
+    <div class="Page">
+      <!-- <div class="PipelineViewPage">
+        <div class="Container">
+          <h1>Pipeline: Public App Spencer Project Google Adsense</h1>
+          <div class="ButtonGroup">
+            <button class="Button" type="button">
+              <i class="Icon fas fa-play"></i>Start load</button
+            ><button class="Button" type="button">
+              <i class="Icon far fa-trash-alt"></i>Delete
+            </button>
+          </div>
+        </div>
+        <div class="Container">
+          <h2>Destination</h2>
+          <p>
+            <strong>Snowflake</strong>, Snowflake at
+            as55502.us-east-2.aws:aspencer:aspencer
+          </p>
+          <div class="ButtonGroup">
+            <a
+              class="Button"
+              href="#/destination/b2e5d45b-1864-4da8-b3e6-79edda65b218?pipeline=e4564d7b-696e-45f4-9316-cba3af3dd78a"
+              ><i class="Icon fas fa-wrench"></i>Edit destination</a
+            >
+          </div>
+        </div>
+        <div class="Container">
+          <h2>Datasets</h2>
+          <div class="ButtonGroup">
+            <a
+              class="Button"
+              href="#/pipeline/e4564d7b-696e-45f4-9316-cba3af3dd78a/datasets/add"
+              ><i class="Icon fas fa-plus"></i>Add datasets</a
+            ><a class="Button" href="datasets-reload.html"
+              ><i class="Icon fas fa-sync-alt"></i>Reload datasets</a
+            ><a
+              class="Button"
+              href="#/pipeline/e4564d7b-696e-45f4-9316-cba3af3dd78a/datasets/remove"
+              ><i class="Icon fas fa-minus"></i>Remove datasets</a
+            ><a
+              class="Button"
+              href="#/pipeline/e4564d7b-696e-45f4-9316-cba3af3dd78a/datasets/report"
+              ><i class="Icon fas fa-exclamation"></i>Report data issues</a
+            >
+          </div>
+        </div>
+        <div class="Container"><h2>Available datasets</h2></div>
+        <div class="Container">
+          <p><strong>Google AdSense</strong>, Spencer Project</p>
+          <div class="ButtonGroup">
+            <a
+              class="Button"
+              href="#/source/f206cbf0-4b16-4e1c-a3f2-d47e363cb529?pipeline=e4564d7b-696e-45f4-9316-cba3af3dd78a"
+              ><i class="Icon fas fa-wrench"></i>Edit source</a
+            >
+          </div>
+          <div class="BoxList">
+            <li class="Box">
+              <span class="Box-title">Accounts</span
+              ><span class="StatusLine"
+                >Initial writing completed at
+                <span
+                  class="TimestampDisplay"
+                  title="Wed, 16 Oct 2024 16:39:57 UTC"
+                  >Wed, 16 Oct 2024 10:39:57</span
+                ></span
+              >
+              <div class="ButtonGroup Box-actions"></div>
+            </li>
+          </div>
+        </div>
+        <div class="Container">
+          <h2>Schedule</h2>
+          <div class="Schedule">
+            <p>This pipeline is currently not loading on a schedule.</p>
+            <div class="ButtonGroup">
+              <button class="Button" type="button">
+                <i class="Icon fas fa-plus"></i>Add schedule
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div class="DialogContainer">
+      <div class="Dialog">
+        <h1 class="Dialog-title">Reuse schema</h1>
+        <div class="Dialog-content">
+          <p>
+            Choosing "Reuse schema" will reuse previously generated schemas for
+            selected datasets.
+          </p>
+          <p>
+            This option is only available after the first data load has been
+            successfully staged but not necessarily written to a destination
+            database. This action will pull the data from the API again from
+            scratch. The original schema will be maintained. Then Precog will
+            attempt to rewrite the data to the database again.
+          </p>
+          <p style="color: rgba(90, 67, 201, 1)">
+            Why - a customer has changed a start date in the connector (source)
+            or there is some other problem in the data, that would necessitate
+            pulling the data from scratch again. The customer is emphatic about
+            what the schema of the table looks like (name and structure or just
+            name?) in the destination and does not want this to change under any
+            circumstances. Many times this is because there are downstream
+            processes or reports that rely on the schema names. If those names
+            change then everything downstream stops.
+          </p>
+        </div>
+        <div class="ButtonGroup Dialog-buttons">
+          <a
+            class="Button Dialog-button"
+            type="button"
+            href="dialoge-datasets-reload.html"
+          >
+            <i class="Icon fas fa-times"></i>Cancel</a
+          ><a
+            class="Button Dialog-button"
+            type="button"
+            href="reuse-schema.html"
+          >
+            <i class="Icon fas fa-redo-alt"></i>Reuse schema</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

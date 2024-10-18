@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Connection Mock-Up</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="img/precog-logo.png" />
+      </div>
+      <div class="ButtonGroup">
+        <a class="Button button" href="load-history-full.html"
+          ><i class="Icon fas fa-table"></i>Load History</a
+        >
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button
+        ><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
+    <div class="Page">
+      <div class="PipelineReloadDatasetsPage">
+        <div class="Container">
+          <h1>Which datasets do you want to reload?</h1>
+        </div>
+        <div class="Container">
+          <div class="Group">
+            <a
+              class="Button"
+              href="#/pipeline/e4564d7b-696e-45f4-9316-cba3af3dd78a"
+              ><i class="Icon fas fa-arrow-left"></i>Back</a
+            >
+          </div>
+        </div>
+        <div class="DatasetSelection">
+          <div class="DatasetSelection">
+            <div class="Container">
+              <div class="DatasetSelection-buttons">
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon far fa-check-square"></i>Deselect all
+                  </button>
+                </div>
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon fas fa-sync-alt"></i>Reload selected datasets
+                  </button>
+                </div>
+              </div>
+              <form class="SearchFilter">
+                <i class="Icon fas fa-search SearchFilter-icon"></i
+                ><input class="Input SearchFilter-input" />
+              </form>
+              <div class="BoxList">
+                <label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Accounts</span
+                    >
+                  </div></label
+                >
+              </div>
+              <div class="DatasetSelection-buttons">
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon far fa-check-square"></i>Deselect all
+                  </button>
+                </div>
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon fas fa-sync-alt"></i>Reload selected datasets
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="DialogContainer">
+      <div class="Dialog">
+        <h1 class="Dialog-title">Do you want to restage this dataset?</h1>
+        <div class="Dialog-content">
+          <p>
+            Choosing "Reload only" will use previously staged data if it's
+            available.
+          </p>
+          <p>
+            If the source data's schema has changed, or changes have been made
+            to the source configuration since the last load, then you should
+            choose "Restage and reload".
+          </p>
+          <p>
+            Choosing "Reuse schema" will reuse previously generated schemas for
+            selected datasets.
+          </p>
+          <p>
+            Note that reloading without schema regeneration might lead to
+            missing columns or tables.
+          </p>
+        </div>
+        <div class="ButtonGroup Dialog-buttons">
+          <a
+            class="Button Dialog-button"
+            type="button"
+            href="datasets-reload.html"
+          >
+            <i class="Icon fas fa-times"></i>Cancel</a
+          ><a
+            class="Button Dialog-button"
+            type="button"
+            href="reuse-schema.html"
+          >
+            <i class="Icon fas fa-redo-alt"></i>Reuse schema</a
+          ><a
+            class="Button Dialog-button"
+            type="button"
+            href="reload-only.html"
+          >
+            <i class="Icon fas fa-redo-alt"></i>Reload only</a
+          ><a
+            class="Button Dialog-button"
+            type="button"
+            href="restage-reload.html"
+          >
+            <i class="Icon fas fa-sync-alt"></i>Restage and reload
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

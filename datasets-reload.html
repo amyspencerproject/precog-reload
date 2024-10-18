@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Connection Mock-Up</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="img/precog-logo.png" />
+      </div>
+      <div class="ButtonGroup">
+        <a class="Button button" href="load-history-full.html"
+          ><i class="Icon fas fa-table"></i>Load History</a
+        >
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button
+        ><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
+    <div class="Page">
+      <div class="PipelineReloadDatasetsPage">
+        <div class="Container">
+          <h1>Which datasets do you want to reload?</h1>
+        </div>
+        <div class="Container">
+          <div class="Group">
+            <a class="Button" href="index.html"
+              ><i class="Icon fas fa-arrow-left"></i>Back</a
+            >
+          </div>
+        </div>
+        <div class="DatasetSelection">
+          <div class="DatasetSelection">
+            <div class="Container">
+              <div class="DatasetSelection-buttons">
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon far fa-check-square"></i>Deselect all
+                  </button>
+                </div>
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon fas fa-sync-alt"></i>Reload selected datasets
+                  </button>
+                </div>
+              </div>
+              <form class="SearchFilter">
+                <i class="Icon fas fa-search SearchFilter-icon"></i
+                ><input class="Input SearchFilter-input" />
+              </form>
+              <div class="BoxList">
+                <label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Accounts</span
+                    >
+                  </div></label
+                >
+              </div>
+              <div class="DatasetSelection-buttons">
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon far fa-check-square"></i>Deselect all
+                  </button>
+                </div>
+                <div class="DatasetSelection-button">
+                  <a
+                    class="Button"
+                    type="button"
+                    href="dialoge-datasets-reload.html"
+                  >
+                    <i class="Icon fas fa-sync-alt"></i>Reload selected datasets
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

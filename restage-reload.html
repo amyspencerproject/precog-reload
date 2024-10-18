@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Connection Mock-Up</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="img/precog-logo.png" />
+      </div>
+      <div class="ButtonGroup">
+        <a class="Button button" href="load-history-full.html"
+          ><i class="Icon fas fa-table"></i>Load History</a
+        >
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button
+        ><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
+    <div class="Page"></div>
+    <div class="DialogContainer">
+      <div class="Dialog">
+        <h1 class="Dialog-title">Restage and reload</h1>
+        <div class="Dialog-content">
+          <p>
+            If the source data's schema has changed, or changes have been made
+            to the source configuration since the last load, then you should
+            choose "Restage and reload".
+          </p>
+          <p>
+            This option is a "completely fresh" initial load. Precog ignores any
+            prior information about the dataset, and pulls everything from the
+            API again from scratch. The original schema is not maintained.
+            Precog inferes the schema entirely from the newly fetched data.
+            Precog writes the data to the database as if this were an initial
+            load.
+          </p>
+          <p style="color: rgba(90, 67, 201, 1)">
+            Why - there is an issue in the data or the schema and the customer
+            is not concerned about the schema changing.
+          </p>
+        </div>
+        <div class="ButtonGroup Dialog-buttons">
+          <a
+            class="Button Dialog-button"
+            type="button"
+            href="dialoge-datasets-reload.html"
+          >
+            <i class="Icon fas fa-times"></i>Cancel</a
+          ><a
+            class="Button Dialog-button"
+            type="button"
+            href="reuse-schema.html"
+          >
+            <i class="Icon fas fa-redo-alt"></i>Reuse schema</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
