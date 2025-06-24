@@ -88,25 +88,53 @@
     </div>
     <div class="DialogContainer">
       <div class="Dialog">
-        <h1 class="Dialog-title">Do you want to restage this dataset?</h1>
+        <h1 class="Dialog-title">How do you want to reload this dataset?</h1>
         <div class="Dialog-content">
+          <p><strong>Restage and Reload</strong></p>
           <p>
-            Choosing "Reload only" will use previously staged data if it's
-            available.
+            If changes have been made to the data source configuration since the
+            last load or the source data's schema has changed, then choose
+            "Restage and reload".
           </p>
+
+          <p><strong>Restage Only</strong></p>
           <p>
-            If the source data's schema has changed, or changes have been made
-            to the source configuration since the last load, then you should
-            choose "Restage and reload".
+            Choosing "Reload only" will use previously staged data as long as it
+            is available.
           </p>
+
+          <p><strong>Reuse Schema</strong></p>
           <p>
             Choosing "Reuse schema" will reuse previously generated schemas for
-            selected datasets.
+            selected datasets. Note that reloading without schema regeneration
+            may lead to missing columns or tables.
           </p>
-          <p>
-            Note that reloading without schema regeneration might lead to
-            missing columns or tables.
-          </p>
+
+          <ul>
+            <p><strong>Restage and Reload</strong></p>
+            <li>
+              <p>
+                If changes have been made to the data source configuration since
+                the last load or the source data's schema has changed, then
+                choose "Restage and reload".
+              </p>
+            </li>
+            <p><strong>Restage Only</strong></p>
+            <li>
+              <p>
+                Choosing "Reload only" will use previously staged data as long
+                as it is available.
+              </p>
+            </li>
+            <p><strong>Reuse Schema</strong></p>
+            <li>
+              <p>
+                Choosing "Reuse schema" will reuse previously generated schemas
+                for selected datasets. Note that reloading without schema
+                regeneration may lead to missing columns or tables.
+              </p>
+            </li>
+          </ul>
         </div>
         <div class="ButtonGroup Dialog-buttons">
           <a
@@ -118,9 +146,9 @@
           ><a
             class="Button Dialog-button"
             type="button"
-            href="reuse-schema.html"
+            href="restage-reload.html"
           >
-            <i class="Icon fas fa-redo-alt"></i>Reuse schema</a
+            <i class="Icon fas fa-sync-alt"></i>Restage and reload </a
           ><a
             class="Button Dialog-button"
             type="button"
@@ -130,10 +158,10 @@
           ><a
             class="Button Dialog-button"
             type="button"
-            href="restage-reload.html"
+            href="reuse-schema.html"
           >
-            <i class="Icon fas fa-sync-alt"></i>Restage and reload
-          </a>
+            <i class="Icon fas fa-redo-alt"></i>Reuse schema</a
+          >
         </div>
       </div>
     </div>
