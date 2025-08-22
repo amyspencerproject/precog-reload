@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reload Mock-Up</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="img/precog-logo.png" />
+      </div>
+      <div class="ButtonGroup">
+        <a class="Button button" href="load-history-full.html"
+          ><i class="Icon fas fa-table"></i>Load History</a
+        >
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button
+        ><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
+    <div class="Page">
+      <div class="PipelineReportDatasetsPage">
+        <div class="Container">
+          <h1>What are the issues with “Accounts”?</h1>
+          <p>
+            Skipped select datasets page and went straight to this UI view. This
+            is what users would see as possible resolutions.
+            <a href="index.html">back to pipeline view</a>
+          </p>
+        </div>
+        <div class="Container">
+          <p>How is the dataset affected?</p>
+          <div class="IssueField">
+            <ul class="Options">
+              <li class="Options-item">
+                <label class="Option"
+                  ><input type="checkbox" class="Option-checkbox" />
+                  <div class="Option-label">
+                    <div class="Option-labelTitle">
+                      The data is missing rows
+                    </div>
+                  </div></label
+                >
+              </li>
+              <li class="Options-item">
+                <label class="Option"
+                  ><input type="checkbox" class="Option-checkbox" />
+                  <div class="Option-label">
+                    <div class="Option-labelTitle">
+                      The data has duplicate rows
+                    </div>
+                  </div></label
+                >
+              </li>
+              <li class="Options-item">
+                <label class="Option"
+                  ><input type="checkbox" class="Option-checkbox" />
+                  <div class="Option-label">
+                    <div class="Option-labelTitle">
+                      The table is missing columns
+                    </div>
+                  </div></label
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="ButtonGroup">
+            <button class="Button" type="button" disabled="">
+              <i class="Icon fas fa-arrow-right"></i>Finish reporting
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

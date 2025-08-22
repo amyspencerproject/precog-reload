@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Connection Mock-Up</title>
+    <title>Reload Mock-Up</title>
     <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
     <link rel="stylesheet" href="./scss/main.css" />
     <link rel="stylesheet" href="./scss/fonts.css" />
@@ -91,47 +91,65 @@
         <h1 class="Dialog-title">How do you want to reload this dataset?</h1>
         <div class="Dialog-content">
           <p><strong>Restage and Reload</strong></p>
-          <p>
-            If changes have been made to the data source configuration since the
-            last load or the source data's schema has changed, then choose
-            "Restage and reload".
-          </p>
-
-          <p><strong>Reload Only</strong></p>
-          <p>
-            Choosing "Reload only" will use previously staged data as long as it
-            is available.
-          </p>
-
-          <p><strong>Reuse Schema</strong></p>
-          <p>
-            Choosing "Reuse schema" will reuse previously generated schemas for
-            selected datasets. Note that reloading without schema regeneration
-            may lead to missing columns or tables.
-          </p>
-
           <ul>
-            <p><strong>Restage and Reload</strong></p>
+            <li>
+              <p>Runs a completely fresh initial load.</p>
+            </li>
+            <li>
+              <p>Ignores all prior data and schemas.</p>
+            </li>
+            <li>
+              <p>Pulls all data from the API again.</p>
+            </li>
+            <li>
+              <p>Infers a brand-new schema from the fresh load.</p>
+            </li>
+            <li>
+              <p>Writes data as if it were the very first load.</p>
+            </li>
+          </ul>
+          <p><strong>Reload Only</strong></p>
+          <ul>
             <li>
               <p>
-                If changes have been made to the data source configuration since
-                the last load or the source data's schema has changed, then
-                choose "Restage and reload".
+                Uses the most recent initial data load (from the first initial
+                data load or the last Restage and Reload).
               </p>
             </li>
-            <p><strong>Reload Only</strong></p>
             <li>
               <p>
-                Choosing "Reload only" will use previously staged data as long
-                as it is available.
+                Does not include delta loads since the most recent initial data
+                load.
               </p>
             </li>
-            <p><strong>Reuse Schema</strong></p>
+            <li>
+              <p>Attempts to rewrite data using the previous schema.</p>
+            </li>
             <li>
               <p>
-                Choosing "Reuse schema" will reuse previously generated schemas
-                for selected datasets. Note that reloading without schema
-                regeneration may lead to missing columns or tables.
+                If no prior data exists, Precog stages and generates a schema.
+              </p>
+            </li>
+          </ul>
+          <p><strong>Reuse Schema</strong></p>
+          <ul>
+            <li>
+              <p>Available after the first initial load is staged.</p>
+            </li>
+            <li>
+              <p>
+                Pulls fresh data from the API but keeps the original schema.
+              </p>
+            </li>
+            <li>
+              <p>
+                Reloads data into the destination using the existing schema.
+              </p>
+            </li>
+            <li>
+              <p>
+                ⚠️ May result in missing columns or tables if the schema has
+                changed.
               </p>
             </li>
           </ul>
